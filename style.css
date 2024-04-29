@@ -1,0 +1,318 @@
+
+
+body{
+    background-color: #FDFDFD;
+    padding: 50px;
+}
+
+#header{
+    color: #FDFDFD;
+    background-color: #E7473C;
+    border-radius: 15px 0 15px 0;
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    padding: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    vertical-align: middle;
+    position: relative;
+    align-items: baseline;
+}
+
+#header a i{
+    margin: 35px 5px 0 0;
+    height: 80px;
+    width: 80px;
+    font-weight: lighter;
+}
+
+.menuBar i{
+    display: none;
+}
+
+#header a{
+    color: #FDFDFD;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    vertical-align: middle;
+    font-size: larger;
+    font-weight: bolder;
+    /* margin: 28px 8px 0 0; */
+}
+#header .register a:hover{
+    font-size: 20px;
+    font-weight: bolder;
+    /* margin: 26px 4px 0 0; */
+    transform: 0.9s;
+}
+
+.nav{
+    padding: 20px 80px 20px 80px;
+    /* position: relative; */
+}
+
+.nav ul{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 10vh;
+    list-style: none;
+    justify-content: space-between;
+    display: flex;
+    
+}
+
+.nav ul li a{
+    color: #E7473C;
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.nav ul li a:hover{
+    color: #FF5C51;
+    text-decoration: underline #FF5C51 3px ;
+    text-underline-offset: 20px;
+
+    transition: 0.5;
+}
+
+.landingPage{
+    display: flex;
+    justify-content: space-between;
+    height: 45vh;
+    vertical-align: middle;
+}
+.landingPage h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 72px;
+}
+.landingPage h1 span{
+    font-size: 72px;
+}
+
+.landingPageContent{
+    color: #E7473C;
+    vertical-align: middle;
+    margin: 5px 5px 20px 50px;
+}
+.landingPageContent h4 i{
+    margin: 0 6px 0 0;
+}
+.landingPageContent div{
+    font-weight: lighter;
+    font-size: 20px;
+    margin: -40px 0 0 0;
+}
+
+.countDown div{
+    display: flex;
+    vertical-align: middle;
+    margin: 70px 10px 0 0;
+
+}
+.countDown div p{
+    background-color: #E7473C;
+    width: 60px;
+    height: 60px;
+    color: #FDFDFD;
+    text-align: center;
+    vertical-align: middle;
+    margin: 6px;
+    padding: 20px 5px 5px 5px;
+    border-radius: 0 5px 0 5px;
+    vertical-align: middle;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.countDown div p span{
+    font-size: 11px;
+}
+
+.countDown div p:hover{
+    margin: -5px 6px 6px 6px;
+    transition: 0.5s;
+}
+
+#about, #speakers, #testimonials{
+    margin: 50px 0 50px 0;
+}
+
+#about, #speakers, #testimonials, h2{
+    text-align: left;
+    color: #E7473C;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#about p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #000000;
+    text-align: justify;
+}
+
+.speakerContainer, .testimonialContainer{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.speakerInfo, .testimonialInfo{
+    border: 2px;
+    border-radius: 0 10px 0 10px;
+    padding: 20px;
+    text-align: justify;
+    color: #000000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-shadow: 2px 2px 5px #E7473C;
+    margin: 20px 20px 20px 20px;
+    padding: 20px;
+    
+}
+
+.speakerInfo:hover{
+    margin: 15px 20px 25px 20px;
+    transition: 0.5s;
+}
+.testimonialInfo:hover{
+    margin: 15px 20px 25px 20px;
+    transition: 0.5s;
+}
+
+.speakerInfo img{
+    border: 2px solid #000000;
+    border-radius: 4px;
+    height: 50%px;
+    width: 40%;
+}
+
+.speakerInfo h5{
+    float: right;
+    font-size: 26px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.speakerInfo h5 span{
+    color: #E7473C;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.speakersSocials{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0 0;
+}
+
+.speakersSocials a{
+    color: #E7473C;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+}
+
+.speakersBio{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 15px;
+    color: #000000;
+    text-align: justify;
+}
+
+
+
+.testimonialInfo i{
+    align-self: center;
+    justify-self: center;
+    justify-content: center;
+    /* width: 200px;
+    height: 200px; */
+}
+
+button{
+    border: solid 2px #E7473C;
+    border-radius: 0 20px 0 20px;;
+    background-color: #E7473C;
+    color: #FDFDFD;
+    font-weight: bolder;
+    padding: 20px;
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+    justify-self: center;
+    margin: 30px;
+}
+button:hover{
+    background-color: #FDFDFD;
+    color: #E7473C;
+    transition: .3s;
+}
+
+#contact{
+    display: block;
+}
+
+#contact p{
+    text-align: justify;
+    display: block;
+    color: #000000;
+    padding: 0px;
+    margin: 10px 0px 40px 0px;
+}
+
+#contact a{
+    border: solid 2px #E7473C;
+    border-radius: 0 20px 0 20px;;
+    background-color: #E7473C;
+    color: #FDFDFD;
+    font-weight: bold;
+    margin: 50px 0px 500px 20px;
+    padding: 20px;
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+    justify-self: center;
+    text-decoration: none;
+}
+
+#contact a:hover{
+    background-color: #FDFDFD;
+    color: #E7473C;
+    transition: .3s;
+}
+
+#sponsors{
+    display: block;
+    margin: 80px 0px 0px 0px;
+}
+
+#sponsors ul{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    /* grid-column-gap: 2px;
+    grid-column: 5; */
+    /* float: left;
+    width: 25%; */
+}
+    
+#sponsors ul li a img{
+    height: 200px;
+    width: 200px;
+}
+
+
+footer{
+    color: #FDFDFD;
+    background-color: #E7473C;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    padding: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    vertical-align: middle;
+    position: relative;
+}
+
+
+/* Responsive Screen 1 */
+
+
