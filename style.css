@@ -48,7 +48,9 @@ body{
 
 .nav{
     padding: 20px 80px 20px 80px;
-    /* position: relative; */
+    position: relative;
+    /* position: fixed; */
+    
 }
 
 .nav ul{
@@ -126,6 +128,7 @@ body{
     font-size: 22px;
     font-weight: bold;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    align-items: center;
 }
 
 .countDown div p span{
@@ -227,6 +230,11 @@ body{
     height: 200px; */
 }
 
+.registerButton{
+    justify-content: center;
+    align-items: ;
+}
+
 button{
     border: solid 2px #E7473C;
     border-radius: 0 20px 0 20px;;
@@ -234,10 +242,6 @@ button{
     color: #FDFDFD;
     font-weight: bolder;
     padding: 20px;
-    justify-content: center;
-    align-self: center;
-    align-content: center;
-    justify-self: center;
     margin: 30px;
 }
 button:hover{
@@ -246,56 +250,25 @@ button:hover{
     transition: .3s;
 }
 
-#contact{
-    display: block;
-}
-
-#contact p{
-    text-align: justify;
-    display: block;
-    color: #000000;
-    padding: 0px;
-    margin: 10px 0px 40px 0px;
-}
-
-#contact a{
-    border: solid 2px #E7473C;
-    border-radius: 0 20px 0 20px;;
-    background-color: #E7473C;
-    color: #FDFDFD;
-    font-weight: bold;
-    margin: 50px 0px 500px 20px;
-    padding: 20px;
-    justify-content: center;
-    align-self: center;
-    align-content: center;
-    justify-self: center;
-    text-decoration: none;
-}
-
-#contact a:hover{
-    background-color: #FDFDFD;
-    color: #E7473C;
-    transition: .3s;
-}
-
 #sponsors{
-    display: block;
     margin: 80px 0px 0px 0px;
+    justify-content: center;
+    align-content: center;
 }
 
 #sponsors ul{
     display: grid;
-    grid-template-columns: 50% 50%;
-    /* grid-column-gap: 2px;
-    grid-column: 5; */
-    /* float: left;
-    width: 25%; */
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-column-gap: 2px;
+    grid-column: 9;
+    grid-template-rows: 2;
+    grid-row: 2;
 }
+
     
 #sponsors ul li a img{
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
 }
 
 
@@ -303,13 +276,41 @@ footer{
     color: #FDFDFD;
     background-color: #E7473C;
     border-radius: 15px 15px 0 0;
-    display: flex;
+    display: block;
     align-self: center;
     justify-content: space-between;
     padding: 30px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     vertical-align: middle;
     position: relative;
+}
+
+#contact p{
+    color: #FDFDFD;
+    text-align: justify;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#contact a{
+    color: #FDFDFD;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#contact a:hover{
+    color: blue;
+    transition: .3s;
+}
+
+.eventPolicy{
+    margin-top: 10px;
+}
+
+footer div a{
+    color: #FDFDFD;
+}
+
+footer div a:hover{
+    color: blue;
+    transition: .3s;
 }
 
 
