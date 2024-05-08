@@ -30,7 +30,18 @@ body{
     display: none;
 }
 
-#header a{
+#header a, #header button{
+    color: #FDFDFD;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    vertical-align: middle;
+    font-size: larger;
+    font-weight: bolder;
+    border: 2px solid transparent;
+    background-color: transparent;
+    /* margin: 28px 8px 0 0; */
+}
+#header button{
     color: #FDFDFD;
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-decoration: none;
@@ -46,6 +57,92 @@ body{
     transform: 0.9s;
 }
 
+.register{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    z-index: 10;
+    max-width: 80%;
+    background-color: #FDFDFD;
+    border-radius: 8px;
+    padding: 50px 100px 50px 100px;
+    /* display: none; */
+}
+.register.active{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.registerHeader{
+    color: #E7473C;
+    font-size: 42px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-bottom: 3px solid #E7473C;
+    padding: 0 0 20px 0;
+    display: flex;
+    justify-content: space-between;
+    vertical-align: baseline;
+}
+.closeRegister{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    font-size: 1.25rem;
+    vertical-align: baseline;
+    color: #E7473C;
+}
+.registerForm{
+    margin: 15px 0 0 0;
+    color: #E7473C;
+    font-size: 24px;
+    
+}
+.registerForm input{
+    font-size: 18px;
+    padding: 20px;
+    border: 2px solid #000000;
+    border-radius: 0 10px 0 10px;
+    /* margin-bottom: 5px; */
+}
+.registerForm label{
+    font-size: 12px;
+}
+.registerForm label a{
+    color: #000000;
+}
+.registerForm button{
+    border-radius: 0 0 0 0;
+    display: block;
+    justify-content: center;
+    text-align: center;
+
+    border: solid 2px #E7473C;
+    background-color: #E7473C;
+    color: #FDFDFD;
+    font-weight: bolder;
+    padding: 15px;
+    margin: 30px;
+}
+
+#overlay{
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0, .6);
+    pointer-events: none;
+    transition: 200ms ease-in-out;
+
+}
+#overlay.active{
+    opacity: 1;
+    pointer-events: all;
+}
+
 .nav{
     padding: 20px 80px 20px 80px;
     position: relative;
@@ -53,7 +150,7 @@ body{
     
 }
 
-.nav ul{
+.nav{
     position: -webkit-sticky;
     position: sticky;
     top: 10vh;
@@ -63,7 +160,7 @@ body{
     
 }
 
-.nav ul li a{
+.nav li a{
     color: #E7473C;
     text-decoration: none;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -71,13 +168,60 @@ body{
     font-size: 18px;
 }
 
-.nav ul li a:hover{
+.nav li a:hover{
     color: #FF5C51;
     text-decoration: underline #FF5C51 3px ;
     text-underline-offset: 20px;
 
     transition: 0.5;
 }
+
+
+
+
+.responsiveNav{
+    position: -webkit-sticky;
+    position: sticky;
+    /* top: 10vh; */
+    list-style: none;
+    padding: 10px 0 10px 10px;
+    justify-content: right;
+    transition: 200ms ease-in-out;
+    z-index: 10; 
+    display: none;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+}
+.responsiveNav li{
+    margin-top: 15px;
+}
+
+.responsiveNav li a{
+    color: #E7473C;
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 18px;
+} 
+
+.responsiveNav li a:hover{
+    color: #FF5C51;
+    text-decoration: underline #FF5C51 3px ;
+    transition: 0.5;
+    text-underline-offset: 5px;
+}
+.responsiveNav div{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    border-top: 2px solid #E7473C;
+    padding: 10px 5px 0 5px;
+    color: #E7473C;
+}
+
+
+
+
 
 .landingPage{
     display: flex;
@@ -125,14 +269,15 @@ body{
     padding: 20px 5px 5px 5px;
     border-radius: 0 5px 0 5px;
     vertical-align: middle;
-    font-size: 22px;
+    font-size: 11px;
     font-weight: bold;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     align-items: center;
 }
 
 .countDown div p span{
-    font-size: 11px;
+    font-size: 22px;
+    padding: 20px 5px 5px 5px;
 }
 
 .countDown div p:hover{
@@ -235,7 +380,7 @@ body{
     align-items: ;
 }
 
-button{
+.registerButton button{
     border: solid 2px #E7473C;
     border-radius: 0 20px 0 20px;;
     background-color: #E7473C;
@@ -244,7 +389,13 @@ button{
     padding: 20px;
     margin: 30px;
 }
-button:hover{
+.registerButton button:hover{
+    background-color: #FDFDFD;
+    color: #E7473C;
+    transition: .3s;
+}
+
+.registerForm button:hover{
     background-color: #FDFDFD;
     color: #E7473C;
     transition: .3s;
@@ -316,4 +467,74 @@ footer div a:hover{
 
 /* Responsive Screen 1 */
 
+@media (max-width: 1200px) {
+    body{
+        padding: 10px;
+    }
+    #header{
+        border-radius: 15px 0 15px 0;
+        display: flex;
+        align-self: center;
+        justify-content: space-between;
+        padding: 15px;
+    }
+    .menuBar i{
+        display: block;
+        margin: 0 10px 0 0;
+    }
+    .menuBar .fa-x{
+        margin-top: -16px;
+    }
+    #header a i{
+        display: none;
+    }
+    
 
+    .responsiveNav div a{
+        color: #E7473C;
+    }
+
+    .landingPage{
+        display: block;
+        justify-content: space-between;
+        height: 50vh;
+        vertical-align: middle;
+    }
+    .landingPage h1, .landingPage h1 span{
+        font-size: 54px;
+    }
+    .countDown div{
+        margin: 40px 10px 0 0;
+    }
+
+
+
+    .speakerContainer, .testimonialContainer{
+        display: block;
+        /* grid-template-columns: 50% 50%; */
+    }
+
+    #sponsors ul{
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-column-gap: 2px;
+        grid-column: 9;
+        grid-template-rows: 2;
+        grid-row: 2;
+    }
+    
+        
+    #sponsors ul li a img{
+        height: 80px;
+        width: 80px;
+    }
+
+
+
+
+
+
+    .hideOnMobile{
+        display: none;
+    }
+}

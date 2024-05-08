@@ -23,20 +23,57 @@
                 <a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                 <a href="" target="_blank"><i class="fa-brands fa-youtube"></i></a>
             </div>
-            <a href="" class="register">REGISTER</a>
-            <div class="menuBar"><i class="fa-solid fa-bars" style="color: #ffffff;"></i></div>
+            <button href="" data-register-target="#register" >REGISTER</button>
+            <div class="menuBar">
+                <i class="fa-solid fa-bars" style="color: #ffffff;" id="menu" onclick=showresponsiveNav()></i>
+                <i class="fa-solid fa-x" id="closeBar" onclick=hideresponsiveNav() style="display: none;"></i>
+            </div>
+            
         </header>
-        <nav class="nav">
-            <ul>
+        <nav>
+            <ul class="nav hideOnMobile">
+                <li class="hideOnMobile"><a href="#">HOME</a></li>
+                <li class="hideOnMobile"><a href="#about">ABOUT</a></li>
+                <li class="hideOnMobile"><a href="#speakers">SPEAKERS</a></li>
+                <li class="hideOnMobile"><a href="#testimonials">TESTIMONIALS</a></li>
+                <li class="hideOnMobile"><a href="#sponsors">SPONSORS</a></li>
+                <li class="hideOnMobile"><a href="#contact">CONTACT</a></li>
+            </ul>
+            <ul class="responsiveNav">
                 <li><a href="#">HOME</a></li>
                 <li><a href="#about">ABOUT</a></li>
                 <li><a href="#speakers">SPEAKERS</a></li>
                 <li><a href="#testimonials">TESTIMONIALS</a></li>
                 <li><a href="#sponsors">SPONSORS</a></li>
                 <li><a href="#contact">CONTACT</a></li>
+
+                <div class="socials">
+                    <a href="" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                </div>
             </ul>
             
         </nav>
+
+        <div class="register" id="register">
+            <div class="registerHeader">
+                <div class="openRegister">Register</div>
+                <button data-closeButton class="closeRegister">&times;</button>
+            </div>
+            <div class="registerForm">
+                <form action="">
+                    <label for="">Name</label> <br>
+                    <input type="text" placeholder="Enter fullname *" required> <br><br>
+                    <label for="">Your Email</label> <br>
+                    <input type="email" placeholder="Enter your Email *" required> <br><br>
+                    <input type="checkbox" required><label for=""><a href="">Agree to the terms and conditions</a></label>
+                    <button>Register</button>
+                </form>
+            </div>
+        </div>
+        <div id="overlay"></div>
         
         <div class="landingPage">
             <div class="landingPageContent">
@@ -48,10 +85,10 @@
             </div>
             <div class="countDown">
                 <div id="countDownn">
-                    <p>20 <br> <span>DAYS</span></p>
-                    <p>11 <br> <span>HOURS</span></p>
-                    <p>32 <br><span> MINUTES</span></p>
-                    <p>48 <br> <span>SECONDS</span></p>
+                    <p> <span id="days"></span> <br> DAYS</p>
+                    <p> <span id="hours"></span> <br> HOURS</p>
+                    <p> <span id="minutes"></span> <br> MINUTES</p>
+                    <p> <span id="seconds"></span> <br> SECONDS</p>
                 </div>
             </div>
         </div>
@@ -192,8 +229,8 @@
             </ul>
         </div>
 
-        <div class="registerButton">          
-            <button>REGISTER NOW</button>
+        <div class="registerButton" id="register">          
+            <button data-register-target="#register">REGISTER NOW</button>
         </div>
       
     
@@ -214,36 +251,11 @@
     <!-- Display the countdown timer in an element -->
 
 
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("Jan 5, 2030 15:37:25").getTime();
 
-// Update the count down every 1 second
-var x = setInterval(function() {
 
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
-  document.getElementById("countDown").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("countDown").innerHTML = "EXPIRED";
-  }
-}, 1000);
-</script>
+<script src="script.js"></script>
+<script src="popUp.js"></script>
+<script src="nav.js"></script>
     
 </body>
 </html>
