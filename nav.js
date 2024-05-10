@@ -1,5 +1,13 @@
 const menu = document.querySelector("#menu")
 const closeBar = document.querySelector("#closeBar")
+const responsiveNav = document.querySelector(".responsiveNav")
+
+
+if (window.innerWidth > 1200) {
+    responsiveNav.style.display = "none";
+    menu.style.display = "none";
+    closeBar.style.display = "none"
+}
 
 function showresponsiveNav() {
     const responsiveNav = document.querySelector(" .responsiveNav");
@@ -10,9 +18,9 @@ function showresponsiveNav() {
 }
 
 function hideresponsiveNav() {
-    const responsiveNav = document.querySelector(".responsiveNav")
     responsiveNav.style.display = "none"
     menu.style.display = "block"
     closeBar.style.display = "none"
 
 }
+

@@ -1,5 +1,3 @@
-
-
 body{
     background-color: #FDFDFD;
     padding: 50px;
@@ -68,7 +66,6 @@ body{
     background-color: #FDFDFD;
     border-radius: 8px;
     padding: 50px 100px 50px 100px;
-    /* display: none; */
 }
 .register.active{
     transform: translate(-50%, -50%) scale(1);
@@ -117,7 +114,6 @@ body{
     display: block;
     justify-content: center;
     text-align: center;
-
     border: solid 2px #E7473C;
     background-color: #E7473C;
     color: #FDFDFD;
@@ -226,16 +222,16 @@ body{
 .landingPage{
     display: flex;
     justify-content: space-between;
-    height: 45vh;
-    vertical-align: middle;
+    /* height: 19vh; */
+    vertical-align: baseline;
 }
 .landingPage h1{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
-    font-size: 72px;
+    font-size: 64px;
 }
 .landingPage h1 span{
-    font-size: 72px;
+    font-size: 64px;
 }
 
 .landingPageContent{
@@ -377,7 +373,6 @@ body{
 
 .registerButton{
     justify-content: center;
-    align-items: ;
 }
 
 .registerButton button{
@@ -465,9 +460,76 @@ footer div a:hover{
 }
 
 
+
+
+
+
+
+
 /* Responsive Screen 1 */
 
-@media (max-width: 1200px) {
+
+@media (max-width: 1024px) {
+    body{
+        padding: 10px;
+    }
+    #header{
+        border-radius: 15px 0 15px 0;
+        display: flex;
+        align-self: center;
+        justify-content: space-between;
+        padding: 15px;
+    }
+    .menuBar i{
+        display: block;
+        margin: 0 10px 0 0;
+    }
+    .menuBar .fa-x{
+        margin-top: -16px;
+    }
+    #header a i{
+        display: none;
+    }
+
+
+    .registerHeader{
+        font-size: 38px;
+    }
+    
+
+    .responsiveNav div a{
+        color: #E7473C;
+    }
+
+    
+
+    .speakerInfo h5{
+        font-size: 18px;
+    }
+
+    .speakerInfo h5 span{
+        font-size: 14px;
+    }
+
+    .speakersBio{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin-top: 15px;
+        color: #000000;
+        text-align: justify;
+        font-size: 14px;
+    }
+
+
+
+
+
+
+    .hideOnMobile{
+        display: none;
+    }
+}
+
+@media (max-width: 768px){
     body{
         padding: 10px;
     }
@@ -496,9 +558,13 @@ footer div a:hover{
 
     .landingPage{
         display: block;
-        justify-content: space-between;
-        height: 50vh;
-        vertical-align: middle;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        /* height: 50vh; */
+        padding: 0;
+        margin: 0;
+
     }
     .landingPage h1, .landingPage h1 span{
         font-size: 54px;
@@ -506,8 +572,17 @@ footer div a:hover{
     .countDown div{
         margin: 40px 10px 0 0;
     }
+    
+        
+    #sponsors ul li a img{
+        height: 80px;
+        width: 80px;
+    }
 
 
+    .registerHeader{
+        font-size: 34px;
+    }
 
     .speakerContainer, .testimonialContainer{
         display: block;
@@ -529,12 +604,160 @@ footer div a:hover{
         width: 80px;
     }
 
+    .speakerInfo h5{
+        font-size: 30px;
+    }
 
+    .speakerInfo h5 span{
+        font-size: 20px;
+    }
+
+    .speakersBio{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin-top: 15px;
+        color: #000000;
+        text-align: justify;
+        font-size: 16px;
+    }
 
 
 
 
     .hideOnMobile{
         display: none;
+    }
+}
+
+@media (max-width: 600px){
+    .speakerInfo h5{
+        font-size: 24px;
+    }
+
+    .speakerInfo h5 span{
+        font-size: 20px;
+    }
+
+    .speakersBio{
+        font-size: 16px;
+    }
+    
+
+    #sponsors ul{
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-column-gap: 2px;
+        grid-column: 9;
+        grid-template-rows: 2;
+        grid-row: 2;
+    }
+    
+        
+    #sponsors ul li a img{
+        height: 80px;
+        width: 80px;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .register{
+        max-width: 60%;
+        background-color: #FDFDFD;
+        border-radius: 8px;
+        padding: 25px 50px 25px 50px;
+    }
+    .registerHeader{
+        font-size: 28px;
+    }
+
+    .speakerInfo h5{
+        font-size: 18px;
+    }
+
+    .speakerInfo h5 span{
+        font-size: 16px;
+    }
+
+    .speakersBio{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin-top: 15px;
+        color: #000000;
+        text-align: justify;
+        font-size: 14px;
+    }
+
+
+    #sponsors ul{
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-column-gap: 2px;
+        grid-column: 9;
+        grid-template-rows: 2;
+        grid-row: 2;
+    }
+    
+        
+    #sponsors ul li a img{
+        height: 80px;
+        width: 80px;
+    }
+}
+
+@media (max-width: 400px){
+    p{
+        font-size: 14px;
+    }
+    .speakerInfo h5{
+        font-size: 16px;
+    }
+
+    .speakerInfo h5 span{
+        font-size: 14px;
+    }
+
+    .speakersBio{
+        font-size: 12px;
+    }
+    #sponsors ul li a img{
+        height: 60px;
+        width: 60px;
+    }
+}
+
+@media (max-width: 350px){
+    p{
+        font-size: 14px;
+    }
+
+    .landingPage h1{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-weight: bold;
+        font-size: 46px;
+        margin-bottom: 50px;
+    }
+    .landingPage h1 span{
+        font-size: 46px;
+    }
+    .landingPageContent h4{
+        font-size: 20px;
+    }
+    
+
+
+
+    .speakerInfo h5{
+        font-size: 14px;
+    }
+
+    .speakerInfo h5 span{
+        font-size: 12px;
+    }
+
+    .speakersBio{
+        font-size: 10px;
+    }
+    #sponsors ul li a img{
+        height: 50px;
+        width: 50px;
     }
 }

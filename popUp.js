@@ -1,20 +1,3 @@
-// let popup = document.getElementById("register");
-
-//     function openRegister() {
-//         popup.classList.add("popUp");
-//         popup.classList.add(".popUpOverlay")
-//     }
-//     function closeRegister() {
-//         popup.classList.remove("popUp");
-//     }
-
-
-
-
-
-
-
-
 const openRegisterButtons = document.querySelectorAll('[data-register-target]')
 const closeRegisterButtons = document.querySelectorAll('[data-close-button]')
 const overlay = document.getElementById("overlay")
